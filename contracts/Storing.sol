@@ -13,5 +13,17 @@ contract Storing {
         blockcount=blockcount+1;
         tasks[_id]=HashMake(_id,_hash);
     }
+    
 
+//     function verifyDocument(uint256 id,string memory hashToVerify)view public returns (bool) 
+// { 
+// if(keccak256(abi.encodePacked(documents[id])) == keccak256(abi.encodePacked(hashToVerify )) ) 
+// { 
+// return true; 
+//      } 
+//      else 
+//      { 
+//        return false; 
+//   }
+//      } 
 }

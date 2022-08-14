@@ -53,7 +53,7 @@ App = {
     await web3.eth.getAccounts().then((acc) => {
       // console.log(acc);
       App.account = acc[0];
-      console.log(App.account);
+      // console.log(App.account);
     });
   },
 
@@ -63,9 +63,9 @@ App = {
     App.contracts.Storing = TruffleContract(Storing);
     App.contracts.Storing.setProvider(App.web3Provider);
     App.Storing = await App.contracts.Storing.deployed();
-    console.log("Storing  con");
-    console.log(Storing);
-    console.log(Storing.abi[1].outputs.length);
+    // console.log("Storing  con");
+    // console.log(Storing);
+    // console.log(Storing.abi[1].outputs.length);
   },
 
 
@@ -73,26 +73,42 @@ App = {
     console.log(App.Storing);
     const count = await Storing.abi[1].outputs.length;
   },
-  // verifyContract: async()=>{
+
+
+  verifyContract: async()=>{
   // thelist.abi[1].outputs.length
-  // const count = await App.contracts.Storing.blockcount().toNumber;
+  // const count = await App.Storing.blockcount().toNumber;
   // console.log(count);
-  //ye sab banane hai verify ke page me
-  //   const hash = document.getElementById("Hash").value;
-  //   const roll = document.getElementById("Rollno").value;
-  //   for (var i = 0; i <= count; i++) {
-  //     const stored = await App.Storing.tasks[i];
-  //     const task_id = stored[0].toNumber();
-  //     const hash_st = stored[1];
-  //     if ((task_id = roll && hash_st == hash)) {
-  //       //aur ek template
-  //       console.log("Verified hai");
-  //     } else {
-  //       //template aur ek
-  //       console.log("Fake hai bhai");
-  //     }
-  //   }
-  // },
+  // ye sab banane hai verify ke page me
+
+    const hash = document.getElementById("Hash").value;
+    // const roll = document.getElementById("Rollno").value;
+    const roll = 1234
+    // for (var i = 1; i <= 17; i++) {
+    //   console.log("Tasks")
+    //   console.log(App.Storing.tasks)
+    //   const stored = await App.Storing.tasks[i];
+    //   console.log(stored);
+    //   const task_id = stored[0].toNumber();
+    //   console.log(task_id);
+    //   const hash_st = stored[1];
+    //   console.log(hash_st);
+    //   if ((task_id = 1234 && hash_st == "Hello")) {
+    //     //aur ek template
+    //     console.log("Verified hai");
+    //   } else {
+    //     //template aur ek
+    //     console.log("Fake hai bhai");
+    //   }
+    // }
+
+    console.log( await App.Storing.tasks[1234])
+    if(App.Storing.tasks[roll]){
+      console.log("Exists")
+    }
+    else
+      console.log("doesn't exist")
+  },
 
   addContract: async () => {
     const Student = {
@@ -105,7 +121,7 @@ App = {
     // hash : CryptoJS.SHA256(JSON.stringify(rollno,mark1,mark2,mark3))
     hash :"Hello"
     }
-    console.log(Student.hash);
+    // console.log(Student.hash);
     await App.Storing.createHash(Student.rollno,Student.hash, { from: App.account });
     // window.location.reload();
   },
