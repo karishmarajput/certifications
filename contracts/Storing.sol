@@ -15,15 +15,11 @@ contract Storing {
     }
     
 
-//     function verifyDocument(uint256 id,string memory hashToVerify)view public returns (bool) 
-// { 
-// if(keccak256(abi.encodePacked(documents[id])) == keccak256(abi.encodePacked(hashToVerify )) ) 
-// { 
-// return true; 
-//      } 
-//      else 
-//      { 
-//        return false; 
-//   }
-//      } 
+   function verifyDocument(uint256 id,string memory hashToVerify)view public returns (bool) { 
+        if(keccak256(abi.encodePacked(tasks[id].hash))== keccak256(abi.encodePacked(hashToVerify))){ 
+            return true; 
+        }else{ 
+            return false; 
+        }
+    } 
 }

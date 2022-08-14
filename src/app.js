@@ -1,4 +1,4 @@
-// const CryptoJS = artifacts.require('crypto-js');
+const CryptoJS =require('crypto-js');
 App = {
 
   contracts: {},
@@ -101,7 +101,7 @@ App = {
     //     console.log("Fake hai bhai");
     //   }
     // }
-
+    await App.Storing.verifyDocument(Student.rollno,Student.hash, { from: App.account });
     console.log( await App.Storing.tasks[1234])
     if(App.Storing.tasks[roll]){
       console.log("Exists")
@@ -118,8 +118,8 @@ App = {
     mark2 : $("#mark2").val(),
     mark3 : $("#mark3").val(),
     
-    // hash : CryptoJS.SHA256(JSON.stringify(rollno,mark1,mark2,mark3))
-    hash :"Hello"
+    hash : CryptoJS.SHA256(JSON.stringify(rollno,mark1,mark2,mark3))
+    
     }
     // console.log(Student.hash);
     await App.Storing.createHash(Student.rollno,Student.hash, { from: App.account });
