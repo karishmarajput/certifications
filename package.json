@@ -23,6 +23,7 @@
         "truffle-contract": "3.0.6"
     },
     "dependencies": {
+        "@truffle/require": "^2.1.2",
         "crpyto-js": "^0.0.1-security",
         "crypto-js": "^4.1.1"
     }

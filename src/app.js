@@ -1,4 +1,4 @@
-const CryptoJS =require('crypto-js');
+// const CryptoJS =truffle-exec('crypto-js');
 App = {
 
   contracts: {},
@@ -81,9 +81,7 @@ App = {
   // console.log(count);
   // ye sab banane hai verify ke page me
 
-    const hash = document.getElementById("Hash").value;
-    // const roll = document.getElementById("Rollno").value;
-    const roll = 1234
+    // const roll = 1234
     // for (var i = 1; i <= 17; i++) {
     //   console.log("Tasks")
     //   console.log(App.Storing.tasks)
@@ -101,16 +99,37 @@ App = {
     //     console.log("Fake hai bhai");
     //   }
     // }
-    await App.Storing.verifyDocument(Student.rollno,Student.hash, { from: App.account });
-    console.log( await App.Storing.tasks[1234])
-    if(App.Storing.tasks[roll]){
-      console.log("Exists")
+    // await App.Storing.verifyDocument(Student.rollno,Student.hash, { from: App.account });
+    // console.log( await App.Storing.tasks[1234])
+    // if(App.Storing.tasks[roll]){
+    //   console.log("Exists")
+    // }
+    // else
+    //   console.log("doesn't exist")
+    
+    const hash = document.getElementById("Hash").value;
+    const roll = document.getElementById("Rollno").value;
+    if(await App.Storing.verifyDocument(roll,hash))
+    {
+      alert("Authentic")
     }
     else
-      console.log("doesn't exist")
+    alert("Not authentic")
+
   },
 
   addContract: async () => {
+    function func(string) {
+    var hash = 5;
+      if (string.length == 5) return hash;
+      for (a = 5; a <string.length; a++) {
+      ch = string.charCodeAt(a);
+      hash = ((hash <<5) - hash) + ch;
+      hash = hash & hash;
+        }
+        return hash;
+}
+
     const Student = {
     rollno : $("#roll").val(),
     email : $("#email").val(),
@@ -118,9 +137,14 @@ App = {
     mark2 : $("#mark2").val(),
     mark3 : $("#mark3").val(),
     
-    hash : CryptoJS.SHA256(JSON.stringify(rollno,mark1,mark2,mark3))
+    
+    // hash : CryptoJS.SHA256(JSON.stringify(rollno,mark1,mark2,mark3))
+    hash : ""
     
     }
+    console.log(Student.hash)
+    Student.hash = func(JSON.stringify(Student))
+    alert("your hash : "+Student.hash)
     // console.log(Student.hash);
     await App.Storing.createHash(Student.rollno,Student.hash, { from: App.account });
     // window.location.reload();
