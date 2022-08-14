@@ -6,8 +6,6 @@ App = {
     await App.loadWeb3();
     await App.loadAccount();
     await App.loadContract();
-    // await App.verifyContract()
-    // await App.addContract();
   },
 
   loadWeb3: async () => {
