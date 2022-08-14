@@ -2,28 +2,10 @@
   "contractName": "Storing",
   "abi": [
     {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "name": "tasks",
-      "outputs": [
-        {
-          "name": "id",
-          "type": "uint256"
-        },
-        {
-          "name": "hash",
-          "type": "string"
-        }
-      ],
+      "inputs": [],
       "payable": false,
-      "stateMutability": "view",
-      "type": "function",
-      "signature": "0x8d977672"
+      "stateMutability": "nonpayable",
+      "type": "constructor"
     },
     {
       "constant": true,
@@ -31,30 +13,51 @@
       "name": "blockcount",
       "outputs": [
         {
+          "internalType": "uint256",
           "name": "",
           "type": "uint256"
         }
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0xdbc1bc19"
+      "type": "function"
     },
     {
-      "inputs": [],
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "tasks",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "hash",
+          "type": "string"
+        }
+      ],
       "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "constructor",
-      "signature": "constructor"
+      "stateMutability": "view",
+      "type": "function"
     },
     {
       "constant": false,
       "inputs": [
         {
+          "internalType": "uint256",
           "name": "_id",
           "type": "uint256"
         },
         {
+          "internalType": "string",
           "name": "_hash",
           "type": "string"
         }
@@ -63,36 +66,36 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0xec35f3d2"
+      "type": "function"
     }
   ],
-  "bytecode": "0x60806040526000805534801561001457600080fd5b50610066620f91426040805190810160405280600681526020017f616263646566000000000000000000000000000000000000000000000000000081525061006b640100000000026401000000009004565b61014c565b6040805180820182528381526020808201848152600086815260018084529490208351815590518051939491936100aa939285019291909101906100b1565b5050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100f257805160ff191683800117855561011f565b8280016001018555821561011f579182015b8281111561011f578251825591602001919060010190610104565b5061012b92915061012f565b5090565b61014991905b8082111561012b5760008155600101610135565b90565b6103a08061015b6000396000f3fe6080604052600436106100565763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638d977672811461005b578063dbc1bc1914610104578063ec35f3d21461012b575b600080fd5b34801561006757600080fd5b506100856004803603602081101561007e57600080fd5b50356101e7565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100c85781810151838201526020016100b0565b50505050905090810190601f1680156100f55780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b34801561011057600080fd5b5061011961028d565b60408051918252519081900360200190f35b34801561013757600080fd5b506101e56004803603604081101561014e57600080fd5b8135919081019060408101602082013564010000000081111561017057600080fd5b82018360208201111561018257600080fd5b803590602001918460018302840111640100000000831117156101a457600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610293945050505050565b005b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102835780601f1061025857610100808354040283529160200191610283565b820191906000526020600020905b81548152906001019060200180831161026657829003601f168201915b5050505050905082565b60005481565b6040805180820182528381526020808201848152600086815260018084529490208351815590518051939491936102d2939285019291909101906102d9565b5050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031a57805160ff1916838001178555610347565b82800160010185558215610347579182015b8281111561034757825182559160200191906001019061032c565b50610353929150610357565b5090565b61037191905b80821115610353576000815560010161035d565b9056fea165627a7a72305820a7a2ff6267ccd286aa35dbe5274901034dd024a5cd71e1d5f6381707414cf2c70029",
-  "deployedBytecode": "0x6080604052600436106100565763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416638d977672811461005b578063dbc1bc1914610104578063ec35f3d21461012b575b600080fd5b34801561006757600080fd5b506100856004803603602081101561007e57600080fd5b50356101e7565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100c85781810151838201526020016100b0565b50505050905090810190601f1680156100f55780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b34801561011057600080fd5b5061011961028d565b60408051918252519081900360200190f35b34801561013757600080fd5b506101e56004803603604081101561014e57600080fd5b8135919081019060408101602082013564010000000081111561017057600080fd5b82018360208201111561018257600080fd5b803590602001918460018302840111640100000000831117156101a457600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610293945050505050565b005b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102835780601f1061025857610100808354040283529160200191610283565b820191906000526020600020905b81548152906001019060200180831161026657829003601f168201915b5050505050905082565b60005481565b6040805180820182528381526020808201848152600086815260018084529490208351815590518051939491936102d2939285019291909101906102d9565b5050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061031a57805160ff1916838001178555610347565b82800160010185558215610347579182015b8281111561034757825182559160200191906001019061032c565b50610353929150610357565b5090565b61037191905b80821115610353576000815560010161035d565b9056fea165627a7a72305820a7a2ff6267ccd286aa35dbe5274901034dd024a5cd71e1d5f6381707414cf2c70029",
-  "sourceMap": "25:353:1:-;;;72:1;49:24;;195:68;8:9:-1;5:2;;;30:1;27;20:12;5:2;195:68:1;227:28;238:7;227:28;;;;;;;;;;;;;;;;;;:10;;;:28;;;:::i;:::-;25:353;;269:106;348:19;;;;;;;;;;;;;;;;;;-1:-1:-1;337:10:1;;;:5;:10;;;;;;:30;;;;;;;;348:19;;337:10;;:30;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;269:106:1:o;25:353::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;25:353:1;;;-1:-1:-1;25:353:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "25:353:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;149:39;;8:9:-1;5:2;;;30:1;27;20:12;5:2;149:39:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;149:39:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;149:39:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;49:24;;8:9:-1;5:2;;;30:1;27;20:12;5:2;49:24:1;;;;;;;;;;;;;;;;;;;;269:106;;8:9:-1;5:2;;;30:1;27;20:12;5:2;269:106:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;269:106:1;;;;;;;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;269:106:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;269:106:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;269:106:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;269:106:1;;-1:-1:-1;269:106:1;;-1:-1:-1;;;;;269:106:1;;;149:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;149:39:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;49:24::-;;;;:::o;269:106::-;348:19;;;;;;;;;;;;;;;;;;-1:-1:-1;337:10:1;;;:5;:10;;;;;;:30;;;;;;;;348:19;;337:10;;:30;;;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;269:106:1:o;25:353::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;25:353:1;;;-1:-1:-1;25:353:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.5.0;\r\ncontract Storing {\r\n    uint public blockcount=0;\r\n    struct HashMake{\r\n        uint id;\r\n        string hash;\r\n    }\r\n    mapping(uint => HashMake ) public tasks;\r\n    constructor() public {\r\n        createHash(1020226,'abcdef');\r\n    }\r\n    function createHash(uint _id,string memory _hash) public {\r\n        tasks[_id]=HashMake(_id,_hash);\r\n    }\r\n}",
-  "sourcePath": "C:/Users/Dell/Desktop/PKPV/contracts/Storing.sol",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"blockcount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_hash\",\"type\":\"string\"}],\"name\":\"createHash\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"tasks\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"hash\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Storing.sol\":\"Storing\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Storing.sol\":{\"keccak256\":\"0xbecf768ec3f563d78d892cec37216cb4bf5bb6c4388902dea599751043ed6ea5\",\"urls\":[\"bzz-raw://63ce20821309d415319144d0be53926bda9a65b271ce0512924c96f7d027c41b\",\"dweb:/ipfs/QmSkCz61ufeHkVPkPGtvsF2dg84EM9EDX46T3tPgS6JrSL\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b50610046620f91426040518060400160405280600681526020016530b131b232b360d11b81525061004b60201b60201c565b610132565b60008054600190810182556040805180820182528581526020808201868152878652848252929094208151815591518051919492936100909390850192910190610097565b5050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100d857805160ff1916838001178555610105565b82800160010185558215610105579182015b828111156101055782518255916020019190600101906100ea565b50610111929150610115565b5090565b61012f91905b80821115610111576000815560010161011b565b90565b610373806101416000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80638d97767214610046578063dbc1bc19146100e2578063ec35f3d2146100fc575b600080fd5b6100636004803603602081101561005c57600080fd5b50356101ab565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100a657818101518382015260200161008e565b50505050905090810190601f1680156100d35780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6100ea610251565b60408051918252519081900360200190f35b6101a96004803603604081101561011257600080fd5b8135919081019060408101602082013564010000000081111561013457600080fd5b82018360208201111561014657600080fd5b8035906020019184600183028401116401000000008311171561016857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610257945050505050565b005b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102475780601f1061021c57610100808354040283529160200191610247565b820191906000526020600020905b81548152906001019060200180831161022a57829003601f168201915b5050505050905082565b60005481565b600080546001908101825560408051808201825285815260208082018681528786528482529290942081518155915180519194929361029c93908501929101906102a3565b5050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102e457805160ff1916838001178555610311565b82800160010185558215610311579182015b828111156103115782518255916020019190600101906102f6565b5061031d929150610321565b5090565b61033b91905b8082111561031d5760008155600101610327565b9056fea265627a7a7231582023e597d7d73778f2063bae76ac0e8db1f96862acfd7af4aec1a8079aa439353d64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80638d97767214610046578063dbc1bc19146100e2578063ec35f3d2146100fc575b600080fd5b6100636004803603602081101561005c57600080fd5b50356101ab565b6040518083815260200180602001828103825283818151815260200191508051906020019080838360005b838110156100a657818101518382015260200161008e565b50505050905090810190601f1680156100d35780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6100ea610251565b60408051918252519081900360200190f35b6101a96004803603604081101561011257600080fd5b8135919081019060408101602082013564010000000081111561013457600080fd5b82018360208201111561014657600080fd5b8035906020019184600183028401116401000000008311171561016857600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610257945050505050565b005b600160208181526000928352604092839020805481840180548651600296821615610100026000190190911695909504601f810185900485028601850190965285855290949193929091908301828280156102475780601f1061021c57610100808354040283529160200191610247565b820191906000526020600020905b81548152906001019060200180831161022a57829003601f168201915b5050505050905082565b60005481565b600080546001908101825560408051808201825285815260208082018681528786528482529290942081518155915180519194929361029c93908501929101906102a3565b5050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102e457805160ff1916838001178555610311565b82800160010185558215610311579182015b828111156103115782518255916020019190600101906102f6565b5061031d929150610321565b5090565b61033b91905b8082111561031d5760008155600101610327565b9056fea265627a7a7231582023e597d7d73778f2063bae76ac0e8db1f96862acfd7af4aec1a8079aa439353d64736f6c63430005100032",
+  "sourceMap": "26:389:1:-;;;73:1;50:24;;196:68;8:9:-1;5:2;;;30:1;27;20:12;5:2;196:68:1;228:28;239:7;228:28;;;;;;;;;;;;;-1:-1:-1;;;228:28:1;;;:10;;;:28;;:::i;:::-;26:389;;270:140;349:10;;;360:1;349:12;;;338:23;;383:19;;;;;;;;;;;;;;;;;;372:10;;;;;;;;;;:30;;;;;;;;383:19;;372:10;;:30;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;270:140:1:o;26:389::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;26:389:1;;;-1:-1:-1;26:389:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "26:389:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:389:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;150:39;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;150:39:1;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;150:39:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;50:24;;;:::i;:::-;;;;;;;;;;;;;;;;270:140;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;270:140:1;;;;;;;;;;;;;;21:11:-1;5:28;;2:2;;;46:1;43;36:12;2:2;270:140:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;270:140:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;270:140:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;81:16;;74:27;;;;-1:-1;270:140:1;;-1:-1:-1;270:140:1;;-1:-1:-1;;;;;270:140:1:i;:::-;;150:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;150:39:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;50:24::-;;;;:::o;270:140::-;349:10;;;360:1;349:12;;;338:23;;383:19;;;;;;;;;;;;;;;;;;372:10;;;;;;;;;;:30;;;;;;;;383:19;;372:10;;:30;;;;;;;;;;:::i;:::-;-1:-1:-1;;;;;270:140:1:o;26:389::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;26:389:1;;;-1:-1:-1;26:389:1;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.5.0;\r\ncontract Storing {\r\n    uint public blockcount=0;\r\n    struct HashMake{\r\n        uint id;\r\n        string hash;\r\n    }\r\n    mapping(uint => HashMake ) public tasks;\r\n    constructor() public {\r\n        createHash(1020226,'abcdef');\r\n    }\r\n    function createHash(uint _id,string memory _hash) public {\r\n        blockcount=blockcount+1;\r\n        tasks[_id]=HashMake(_id,_hash);\r\n    }\r\n\r\n}",
+  "sourcePath": "D:\\paul\\Coding_related\\WebDev\\CertificateHack\\certifications\\contracts\\Storing.sol",
   "ast": {
-    "absolutePath": "/C/Users/Dell/Desktop/PKPV/contracts/Storing.sol",
+    "absolutePath": "project:/contracts/Storing.sol",
     "exportedSymbols": {
       "Storing": [
-        73
+        79
       ]
     },
-    "id": 74,
+    "id": 80,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 34,
         "literals": [
           "solidity",
-          "^",
+          ">=",
           "0.5",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "src": "0:24:1"
       },
       {
         "baseContracts": [],
@@ -100,9 +103,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 73,
+        "id": 79,
         "linearizedBaseContracts": [
-          73
+          79
         ],
         "name": "Storing",
         "nodeType": "ContractDefinition",
@@ -112,8 +115,8 @@
             "id": 37,
             "name": "blockcount",
             "nodeType": "VariableDeclaration",
-            "scope": 73,
-            "src": "49:24:1",
+            "scope": 79,
+            "src": "50:24:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -124,7 +127,7 @@
               "id": 35,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
-              "src": "49:4:1",
+              "src": "50:4:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -140,7 +143,7 @@
               "kind": "number",
               "lValueRequested": false,
               "nodeType": "Literal",
-              "src": "72:1:1",
+              "src": "73:1:1",
               "subdenomination": null,
               "typeDescriptions": {
                 "typeIdentifier": "t_rational_0_by_1",
@@ -160,7 +163,7 @@
                 "name": "id",
                 "nodeType": "VariableDeclaration",
                 "scope": 42,
-                "src": "106:7:1",
+                "src": "107:7:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -171,7 +174,7 @@
                   "id": 38,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
-                  "src": "106:4:1",
+                  "src": "107:4:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
@@ -186,7 +189,7 @@
                 "name": "hash",
                 "nodeType": "VariableDeclaration",
                 "scope": 42,
-                "src": "124:11:1",
+                "src": "125:11:1",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -197,7 +200,7 @@
                   "id": 40,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "124:6:1",
+                  "src": "125:6:1",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -209,8 +212,8 @@
             ],
             "name": "HashMake",
             "nodeType": "StructDefinition",
-            "scope": 73,
-            "src": "80:63:1",
+            "scope": 79,
+            "src": "81:63:1",
             "visibility": "public"
           },
           {
@@ -218,8 +221,8 @@
             "id": 46,
             "name": "tasks",
             "nodeType": "VariableDeclaration",
-            "scope": 73,
-            "src": "149:39:1",
+            "scope": 79,
+            "src": "150:39:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -232,14 +235,14 @@
                 "id": 43,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
-                "src": "157:4:1",
+                "src": "158:4:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "149:26:1",
+              "src": "150:26:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HashMake_$42_storage_$",
                 "typeString": "mapping(uint256 => struct Storing.HashMake)"
@@ -250,7 +253,7 @@
                 "name": "HashMake",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 42,
-                "src": "165:8:1",
+                "src": "166:8:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_HashMake_$42_storage_ptr",
                   "typeString": "struct Storing.HashMake"
@@ -264,7 +267,7 @@
             "body": {
               "id": 54,
               "nodeType": "Block",
-              "src": "216:47:1",
+              "src": "217:47:1",
               "statements": [
                 {
                   "expression": {
@@ -280,7 +283,7 @@
                         "kind": "number",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "238:7:1",
+                        "src": "239:7:1",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_rational_1020226_by_1",
@@ -298,7 +301,7 @@
                         "kind": "string",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "246:8:1",
+                        "src": "247:8:1",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_stringliteral_acd0c377fe36d5b209125185bc3ac41155ed1bf7103ef9f0c2aff4320460b6df",
@@ -322,8 +325,8 @@
                       "name": "createHash",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 72,
-                      "src": "227:10:1",
+                      "referencedDeclaration": 78,
+                      "src": "228:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (uint256,string memory)"
@@ -337,7 +340,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "227:28:1",
+                    "src": "228:28:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -345,7 +348,7 @@
                   },
                   "id": 53,
                   "nodeType": "ExpressionStatement",
-                  "src": "227:28:1"
+                  "src": "228:28:1"
                 }
               ]
             },
@@ -360,30 +363,113 @@
               "id": 47,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "206:2:1"
+              "src": "207:2:1"
             },
             "returnParameters": {
               "id": 48,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "216:0:1"
+              "src": "217:0:1"
             },
-            "scope": 73,
-            "src": "195:68:1",
+            "scope": 79,
+            "src": "196:68:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 71,
+              "id": 77,
               "nodeType": "Block",
-              "src": "326:49:1",
+              "src": "327:83:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 69,
+                    "id": 66,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 62,
+                      "name": "blockcount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "338:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 65,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 63,
+                        "name": "blockcount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 37,
+                        "src": "349:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "+",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "31",
+                        "id": 64,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "360:1:1",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_1_by_1",
+                          "typeString": "int_const 1"
+                        },
+                        "value": "1"
+                      },
+                      "src": "349:12:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "338:23:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 67,
+                  "nodeType": "ExpressionStatement",
+                  "src": "338:23:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 75,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -392,26 +478,26 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 62,
+                        "id": 68,
                         "name": "tasks",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 46,
-                        "src": "337:5:1",
+                        "src": "372:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HashMake_$42_storage_$",
                           "typeString": "mapping(uint256 => struct Storing.HashMake storage ref)"
                         }
                       },
-                      "id": 64,
+                      "id": 70,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 63,
+                        "id": 69,
                         "name": "_id",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 57,
-                        "src": "343:3:1",
+                        "src": "378:3:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -422,7 +508,7 @@
                       "isPure": false,
                       "lValueRequested": true,
                       "nodeType": "IndexAccess",
-                      "src": "337:10:1",
+                      "src": "372:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_HashMake_$42_storage",
                         "typeString": "struct Storing.HashMake storage ref"
@@ -435,12 +521,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 66,
+                          "id": 72,
                           "name": "_id",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 57,
-                          "src": "357:3:1",
+                          "src": "392:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -448,12 +534,12 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 67,
+                          "id": 73,
                           "name": "_hash",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 59,
-                          "src": "361:5:1",
+                          "src": "396:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -471,18 +557,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 65,
+                        "id": 71,
                         "name": "HashMake",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 42,
-                        "src": "348:8:1",
+                        "src": "383:8:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_HashMake_$42_storage_ptr_$",
                           "typeString": "type(struct Storing.HashMake storage pointer)"
                         }
                       },
-                      "id": 68,
+                      "id": 74,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -490,26 +576,26 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "348:19:1",
+                      "src": "383:19:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_HashMake_$42_memory",
                         "typeString": "struct Storing.HashMake memory"
                       }
                     },
-                    "src": "337:30:1",
+                    "src": "372:30:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_HashMake_$42_storage",
                       "typeString": "struct Storing.HashMake storage ref"
                     }
                   },
-                  "id": 70,
+                  "id": 76,
                   "nodeType": "ExpressionStatement",
-                  "src": "337:30:1"
+                  "src": "372:30:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 72,
+            "id": 78,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -524,8 +610,8 @@
                   "id": 57,
                   "name": "_id",
                   "nodeType": "VariableDeclaration",
-                  "scope": 72,
-                  "src": "289:8:1",
+                  "scope": 78,
+                  "src": "290:8:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -536,7 +622,7 @@
                     "id": 56,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "289:4:1",
+                    "src": "290:4:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -550,8 +636,8 @@
                   "id": 59,
                   "name": "_hash",
                   "nodeType": "VariableDeclaration",
-                  "scope": 72,
-                  "src": "298:19:1",
+                  "scope": 78,
+                  "src": "299:19:1",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -562,7 +648,7 @@
                     "id": 58,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "298:6:1",
+                    "src": "299:6:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -572,561 +658,704 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "288:30:1"
+              "src": "289:30:1"
             },
             "returnParameters": {
               "id": 61,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "326:0:1"
+              "src": "327:0:1"
             },
-            "scope": 73,
-            "src": "269:106:1",
+            "scope": 79,
+            "src": "270:140:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 74,
-        "src": "25:353:1"
+        "scope": 80,
+        "src": "26:389:1"
       }
     ],
-    "src": "0:378:1"
+    "src": "0:415:1"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/Dell/Desktop/PKPV/contracts/Storing.sol",
-    "exportedSymbols": {
-      "Storing": [
-        73
-      ]
+    "attributes": {
+      "absolutePath": "project:/contracts/Storing.sol",
+      "exportedSymbols": {
+        "Storing": [
+          79
+        ]
+      }
     },
-    "id": 74,
-    "nodeType": "SourceUnit",
-    "nodes": [
+    "children": [
       {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".0"
+          ]
+        },
         "id": 34,
-        "literals": [
-          "solidity",
-          "^",
-          "0.5",
-          ".0"
-        ],
-        "nodeType": "PragmaDirective",
-        "src": "0:23:1"
+        "name": "PragmaDirective",
+        "src": "0:24:1"
       },
       {
-        "baseContracts": [],
-        "contractDependencies": [],
-        "contractKind": "contract",
-        "documentation": null,
-        "fullyImplemented": true,
-        "id": 73,
-        "linearizedBaseContracts": [
-          73
-        ],
-        "name": "Storing",
-        "nodeType": "ContractDefinition",
-        "nodes": [
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            79
+          ],
+          "name": "Storing",
+          "scope": 80
+        },
+        "children": [
           {
-            "constant": false,
-            "id": 37,
-            "name": "blockcount",
-            "nodeType": "VariableDeclaration",
-            "scope": 73,
-            "src": "49:24:1",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_uint256",
-              "typeString": "uint256"
+            "attributes": {
+              "constant": false,
+              "name": "blockcount",
+              "scope": 79,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
             },
-            "typeName": {
-              "id": 35,
-              "name": "uint",
-              "nodeType": "ElementaryTypeName",
-              "src": "49:4:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_uint256",
-                "typeString": "uint256"
-              }
-            },
-            "value": {
-              "argumentTypes": null,
-              "hexValue": "30",
-              "id": 36,
-              "isConstant": false,
-              "isLValue": false,
-              "isPure": true,
-              "kind": "number",
-              "lValueRequested": false,
-              "nodeType": "Literal",
-              "src": "72:1:1",
-              "subdenomination": null,
-              "typeDescriptions": {
-                "typeIdentifier": "t_rational_0_by_1",
-                "typeString": "int_const 0"
-              },
-              "value": "0"
-            },
-            "visibility": "public"
-          },
-          {
-            "canonicalName": "Storing.HashMake",
-            "id": 42,
-            "members": [
+            "children": [
               {
-                "constant": false,
-                "id": 39,
-                "name": "id",
-                "nodeType": "VariableDeclaration",
-                "scope": 42,
-                "src": "106:7:1",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
-                },
-                "typeName": {
-                  "id": 38,
+                "attributes": {
                   "name": "uint",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "106:4:1",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  }
+                  "type": "uint256"
                 },
-                "value": null,
-                "visibility": "internal"
+                "id": 35,
+                "name": "ElementaryTypeName",
+                "src": "50:4:1"
               },
               {
-                "constant": false,
-                "id": 41,
-                "name": "hash",
-                "nodeType": "VariableDeclaration",
-                "scope": 42,
-                "src": "124:11:1",
-                "stateVariable": false,
-                "storageLocation": "default",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_string_storage_ptr",
-                  "typeString": "string"
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
                 },
-                "typeName": {
-                  "id": 40,
-                  "name": "string",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "124:6:1",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string"
-                  }
-                },
-                "value": null,
-                "visibility": "internal"
+                "id": 36,
+                "name": "Literal",
+                "src": "73:1:1"
               }
             ],
-            "name": "HashMake",
-            "nodeType": "StructDefinition",
-            "scope": 73,
-            "src": "80:63:1",
-            "visibility": "public"
+            "id": 37,
+            "name": "VariableDeclaration",
+            "src": "50:24:1"
           },
           {
-            "constant": false,
-            "id": 46,
-            "name": "tasks",
-            "nodeType": "VariableDeclaration",
-            "scope": 73,
-            "src": "149:39:1",
-            "stateVariable": true,
-            "storageLocation": "default",
-            "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HashMake_$42_storage_$",
-              "typeString": "mapping(uint256 => struct Storing.HashMake)"
+            "attributes": {
+              "canonicalName": "Storing.HashMake",
+              "name": "HashMake",
+              "scope": 79,
+              "visibility": "public"
             },
-            "typeName": {
-              "id": 45,
-              "keyType": {
-                "id": 43,
-                "name": "uint",
-                "nodeType": "ElementaryTypeName",
-                "src": "157:4:1",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_uint256",
-                  "typeString": "uint256"
-                }
-              },
-              "nodeType": "Mapping",
-              "src": "149:26:1",
-              "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HashMake_$42_storage_$",
-                "typeString": "mapping(uint256 => struct Storing.HashMake)"
-              },
-              "valueType": {
-                "contractScope": null,
-                "id": 44,
-                "name": "HashMake",
-                "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 42,
-                "src": "165:8:1",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_HashMake_$42_storage_ptr",
-                  "typeString": "struct Storing.HashMake"
-                }
-              }
-            },
-            "value": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 54,
-              "nodeType": "Block",
-              "src": "216:47:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "arguments": [
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "31303230323236",
-                        "id": 50,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "number",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "238:7:1",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_rational_1020226_by_1",
-                          "typeString": "int_const 1020226"
-                        },
-                        "value": "1020226"
-                      },
-                      {
-                        "argumentTypes": null,
-                        "hexValue": "616263646566",
-                        "id": 51,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": true,
-                        "kind": "string",
-                        "lValueRequested": false,
-                        "nodeType": "Literal",
-                        "src": "246:8:1",
-                        "subdenomination": null,
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_stringliteral_acd0c377fe36d5b209125185bc3ac41155ed1bf7103ef9f0c2aff4320460b6df",
-                          "typeString": "literal_string \"abcdef\""
-                        },
-                        "value": "abcdef"
-                      }
-                    ],
-                    "expression": {
-                      "argumentTypes": [
-                        {
-                          "typeIdentifier": "t_rational_1020226_by_1",
-                          "typeString": "int_const 1020226"
-                        },
-                        {
-                          "typeIdentifier": "t_stringliteral_acd0c377fe36d5b209125185bc3ac41155ed1bf7103ef9f0c2aff4320460b6df",
-                          "typeString": "literal_string \"abcdef\""
-                        }
-                      ],
-                      "id": 49,
-                      "name": "createHash",
-                      "nodeType": "Identifier",
-                      "overloadedDeclarations": [],
-                      "referencedDeclaration": 72,
-                      "src": "227:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$_t_string_memory_ptr_$returns$__$",
-                        "typeString": "function (uint256,string memory)"
-                      }
-                    },
-                    "id": 52,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "kind": "functionCall",
-                    "lValueRequested": false,
-                    "names": [],
-                    "nodeType": "FunctionCall",
-                    "src": "227:28:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_tuple$__$",
-                      "typeString": "tuple()"
-                    }
-                  },
-                  "id": 53,
-                  "nodeType": "ExpressionStatement",
-                  "src": "227:28:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 55,
-            "implemented": true,
-            "kind": "constructor",
-            "modifiers": [],
-            "name": "",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 47,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "206:2:1"
-            },
-            "returnParameters": {
-              "id": 48,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "216:0:1"
-            },
-            "scope": 73,
-            "src": "195:68:1",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 71,
-              "nodeType": "Block",
-              "src": "326:49:1",
-              "statements": [
-                {
-                  "expression": {
-                    "argumentTypes": null,
-                    "id": 69,
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": false,
-                    "lValueRequested": false,
-                    "leftHandSide": {
-                      "argumentTypes": null,
-                      "baseExpression": {
-                        "argumentTypes": null,
-                        "id": 62,
-                        "name": "tasks",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 46,
-                        "src": "337:5:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_HashMake_$42_storage_$",
-                          "typeString": "mapping(uint256 => struct Storing.HashMake storage ref)"
-                        }
-                      },
-                      "id": 64,
-                      "indexExpression": {
-                        "argumentTypes": null,
-                        "id": 63,
-                        "name": "_id",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 57,
-                        "src": "343:3:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_uint256",
-                          "typeString": "uint256"
-                        }
-                      },
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": true,
-                      "nodeType": "IndexAccess",
-                      "src": "337:10:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_HashMake_$42_storage",
-                        "typeString": "struct Storing.HashMake storage ref"
-                      }
-                    },
-                    "nodeType": "Assignment",
-                    "operator": "=",
-                    "rightHandSide": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 66,
-                          "name": "_id",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 57,
-                          "src": "357:3:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 67,
-                          "name": "_hash",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 59,
-                          "src": "361:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_string_memory_ptr",
-                            "typeString": "string memory"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          {
-                            "typeIdentifier": "t_string_memory_ptr",
-                            "typeString": "string memory"
-                          }
-                        ],
-                        "id": 65,
-                        "name": "HashMake",
-                        "nodeType": "Identifier",
-                        "overloadedDeclarations": [],
-                        "referencedDeclaration": 42,
-                        "src": "348:8:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_HashMake_$42_storage_ptr_$",
-                          "typeString": "type(struct Storing.HashMake storage pointer)"
-                        }
-                      },
-                      "id": 68,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "structConstructorCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "348:19:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_HashMake_$42_memory",
-                        "typeString": "struct Storing.HashMake memory"
-                      }
-                    },
-                    "src": "337:30:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_HashMake_$42_storage",
-                      "typeString": "struct Storing.HashMake storage ref"
-                    }
-                  },
-                  "id": 70,
-                  "nodeType": "ExpressionStatement",
-                  "src": "337:30:1"
-                }
-              ]
-            },
-            "documentation": null,
-            "id": 72,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "createHash",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 60,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
+            "children": [
+              {
+                "attributes": {
                   "constant": false,
-                  "id": 57,
-                  "name": "_id",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 72,
-                  "src": "289:8:1",
+                  "name": "id",
+                  "scope": 42,
                   "stateVariable": false,
                   "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 56,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "289:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
+                  "type": "uint256",
                   "value": null,
                   "visibility": "internal"
                 },
-                {
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 38,
+                    "name": "ElementaryTypeName",
+                    "src": "107:4:1"
+                  }
+                ],
+                "id": 39,
+                "name": "VariableDeclaration",
+                "src": "107:7:1"
+              },
+              {
+                "attributes": {
                   "constant": false,
-                  "id": 59,
-                  "name": "_hash",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 72,
-                  "src": "298:19:1",
+                  "name": "hash",
+                  "scope": 42,
                   "stateVariable": false,
-                  "storageLocation": "memory",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_memory_ptr",
-                    "typeString": "string"
-                  },
-                  "typeName": {
-                    "id": 58,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "298:6:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string"
-                    }
-                  },
+                  "storageLocation": "default",
+                  "type": "string",
                   "value": null,
                   "visibility": "internal"
-                }
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 40,
+                    "name": "ElementaryTypeName",
+                    "src": "125:6:1"
+                  }
+                ],
+                "id": 41,
+                "name": "VariableDeclaration",
+                "src": "125:11:1"
+              }
+            ],
+            "id": 42,
+            "name": "StructDefinition",
+            "src": "81:63:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "tasks",
+              "scope": 79,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct Storing.HashMake)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct Storing.HashMake)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 43,
+                    "name": "ElementaryTypeName",
+                    "src": "158:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "HashMake",
+                      "referencedDeclaration": 42,
+                      "type": "struct Storing.HashMake"
+                    },
+                    "id": 44,
+                    "name": "UserDefinedTypeName",
+                    "src": "166:8:1"
+                  }
+                ],
+                "id": 45,
+                "name": "Mapping",
+                "src": "150:26:1"
+              }
+            ],
+            "id": 46,
+            "name": "VariableDeclaration",
+            "src": "150:39:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
               ],
-              "src": "288:30:1"
+              "name": "",
+              "scope": 79,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
             },
-            "returnParameters": {
-              "id": 61,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "326:0:1"
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 47,
+                "name": "ParameterList",
+                "src": "207:2:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 48,
+                "name": "ParameterList",
+                "src": "217:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_rational_1020226_by_1",
+                                  "typeString": "int_const 1020226"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_acd0c377fe36d5b209125185bc3ac41155ed1bf7103ef9f0c2aff4320460b6df",
+                                  "typeString": "literal_string \"abcdef\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 78,
+                              "type": "function (uint256,string memory)",
+                              "value": "createHash"
+                            },
+                            "id": 49,
+                            "name": "Identifier",
+                            "src": "228:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31303230323236",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 1020226",
+                              "value": "1020226"
+                            },
+                            "id": 50,
+                            "name": "Literal",
+                            "src": "239:7:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "616263646566",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"abcdef\"",
+                              "value": "abcdef"
+                            },
+                            "id": 51,
+                            "name": "Literal",
+                            "src": "247:8:1"
+                          }
+                        ],
+                        "id": 52,
+                        "name": "FunctionCall",
+                        "src": "228:28:1"
+                      }
+                    ],
+                    "id": 53,
+                    "name": "ExpressionStatement",
+                    "src": "228:28:1"
+                  }
+                ],
+                "id": 54,
+                "name": "Block",
+                "src": "217:47:1"
+              }
+            ],
+            "id": 55,
+            "name": "FunctionDefinition",
+            "src": "196:68:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "createHash",
+              "scope": 79,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
             },
-            "scope": 73,
-            "src": "269:106:1",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_id",
+                      "scope": 78,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 56,
+                        "name": "ElementaryTypeName",
+                        "src": "290:4:1"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "VariableDeclaration",
+                    "src": "290:8:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_hash",
+                      "scope": 78,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 58,
+                        "name": "ElementaryTypeName",
+                        "src": "299:6:1"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "VariableDeclaration",
+                    "src": "299:19:1"
+                  }
+                ],
+                "id": 60,
+                "name": "ParameterList",
+                "src": "289:30:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 61,
+                "name": "ParameterList",
+                "src": "327:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "uint256",
+                              "value": "blockcount"
+                            },
+                            "id": 62,
+                            "name": "Identifier",
+                            "src": "338:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 37,
+                                  "type": "uint256",
+                                  "value": "blockcount"
+                                },
+                                "id": 63,
+                                "name": "Identifier",
+                                "src": "349:10:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "31",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 1",
+                                  "value": "1"
+                                },
+                                "id": 64,
+                                "name": "Literal",
+                                "src": "360:1:1"
+                              }
+                            ],
+                            "id": 65,
+                            "name": "BinaryOperation",
+                            "src": "349:12:1"
+                          }
+                        ],
+                        "id": 66,
+                        "name": "Assignment",
+                        "src": "338:23:1"
+                      }
+                    ],
+                    "id": 67,
+                    "name": "ExpressionStatement",
+                    "src": "338:23:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct Storing.HashMake storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct Storing.HashMake storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 46,
+                                  "type": "mapping(uint256 => struct Storing.HashMake storage ref)",
+                                  "value": "tasks"
+                                },
+                                "id": 68,
+                                "name": "Identifier",
+                                "src": "372:5:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 57,
+                                  "type": "uint256",
+                                  "value": "_id"
+                                },
+                                "id": 69,
+                                "name": "Identifier",
+                                "src": "378:3:1"
+                              }
+                            ],
+                            "id": 70,
+                            "name": "IndexAccess",
+                            "src": "372:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct Storing.HashMake memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 42,
+                                  "type": "type(struct Storing.HashMake storage pointer)",
+                                  "value": "HashMake"
+                                },
+                                "id": 71,
+                                "name": "Identifier",
+                                "src": "383:8:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 57,
+                                  "type": "uint256",
+                                  "value": "_id"
+                                },
+                                "id": 72,
+                                "name": "Identifier",
+                                "src": "392:3:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 59,
+                                  "type": "string memory",
+                                  "value": "_hash"
+                                },
+                                "id": 73,
+                                "name": "Identifier",
+                                "src": "396:5:1"
+                              }
+                            ],
+                            "id": 74,
+                            "name": "FunctionCall",
+                            "src": "383:19:1"
+                          }
+                        ],
+                        "id": 75,
+                        "name": "Assignment",
+                        "src": "372:30:1"
+                      }
+                    ],
+                    "id": 76,
+                    "name": "ExpressionStatement",
+                    "src": "372:30:1"
+                  }
+                ],
+                "id": 77,
+                "name": "Block",
+                "src": "327:83:1"
+              }
+            ],
+            "id": 78,
+            "name": "FunctionDefinition",
+            "src": "270:140:1"
           }
         ],
-        "scope": 74,
-        "src": "25:353:1"
+        "id": 79,
+        "name": "ContractDefinition",
+        "src": "26:389:1"
       }
     ],
-    "src": "0:378:1"
+    "id": 80,
+    "name": "SourceUnit",
+    "src": "0:415:1"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
   "networks": {
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x9a4F29f7Df9DA6854339B319e7178bFe1a24fC76",
-      "transactionHash": "0xdbe80c438da82b9c775c739df830d6612e7c39f7c6ae6a4fb713284fd0ccc0bb"
+      "address": "0x5f43F14f1aC1F37432165dafC12814079f758099",
+      "transactionHash": "0xc4457d3dcde5d558d54172c4729a4880570ae1b6fc2f36130f0483c015d5dc4e"
     }
   },
-  "schemaVersion": "3.0.1",
-  "updatedAt": "2022-08-12T16:08:24.933Z",
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-08-14T09:10:26.710Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

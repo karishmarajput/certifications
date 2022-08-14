@@ -44,8 +44,9 @@ App = {
       // Account info hai
       // Ek id banade aur append karde ye account info
       await web3.eth.getAccounts().then((acc) => {
-        console.log(acc);
+        // console.log(acc);
         App.account = acc[0];
+        console.log(App.account)
       });
     },
     loadContract: async() =>{
@@ -54,35 +55,36 @@ App = {
         const thelist=await $.getJSON('Storing.json')
         App.contracts.thelist=TruffleContract(thelist)
         App.contracts.thelist.setProvider(App.web3Provider)
-        console.log(thelist)
+        console.log("The list")
+        console.log(thelist.abi[1].outputs.length)
 
     },
     renderContracts: async()=>{
 
-        const count=await App.Storing.blockcount();
+      console.log(App.Storing)
+      const count = await thelist.abi[1].outputs.length;
+
         //Idhar se bhi template daaldo
     },
     verifyContract: async()=>{
-        const count=await App.Storing.blockcount();
-        //ye sab banane hai verify ke page me
-        const hash=document.getElementById('Hash').value
-        const roll=document.getElementById('Rollno').value
-        for (var i=0;i<=count;i++){
-            const stored=await App.Storing.tasks[i];
-            const task_id=stored[0].toNumber();
-            const hash_st=stored[1];
-            if(task_id=roll && hash_st==hash){
-                //aur ek template
-                console.log('Verified hai')
-            }
-            else{
-                //template aur ek
-                console.log('Fake hai bhai')
-            }
-
-            
-
+      //thelist.abi[1].outputs.length
+      const count = await App.Storing.blockcount().toNumber;
+      console.log(count);
+      //ye sab banane hai verify ke page me
+      const hash = document.getElementById("Hash").value;
+      const roll = document.getElementById("Rollno").value;
+      for (var i = 0; i <= count; i++) {
+        const stored = await App.Storing.tasks[i];
+        const task_id = stored[0].toNumber();
+        const hash_st = stored[1];
+        if ((task_id = roll && hash_st == hash)) {
+          //aur ek template
+          console.log("Verified hai");
+        } else {
+          //template aur ek
+          console.log("Fake hai bhai");
         }
+      }
     },
     addContract: async()=>{
         const rollno=document.getElementById('roll')
