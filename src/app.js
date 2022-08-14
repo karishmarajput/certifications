@@ -43,8 +43,10 @@ App = {
     loadAccount: async () => {
       // Account info hai
       // Ek id banade aur append karde ye account info
-      App.account = web3.eth.accounts[0]
-      console.log(App.account)
+      await web3.eth.getAccounts().then((acc) => {
+        console.log(acc);
+        App.account = acc[0];
+      });
     },
     loadContract: async() =>{
         //Idhar no. of certificates dikhate hai
