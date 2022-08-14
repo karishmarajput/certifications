@@ -14,16 +14,16 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <form id="log_form">
+        <form id="log_form"  onsubmit = "App.addContract();return false">
             
             <div  class="form-div">
                 <legend>Enter the details:</legend>
-                <input type="number" class="form-control"id="rn" placeholder="Rollno" />
-                <input type="email" class="form-control"id="emailg" placeholder="Email">
+                <input type="number" class="form-control"id="roll" placeholder="Rollno" />
+                <input type="email" class="form-control"id="email" placeholder="Email">
                 <input type="number"class="form-control" id="mark1" placeholder="Marks1">
                 <input type="number" class="form-control"id="mark2" placeholder="Marks2">
                 <input type="number" class="form-control"id="mark3" placeholder="Marks3">
-                <input type="submit" class="btn btn-primary"value="Submit Form"/>
+                <input type="submit" class="btn btn-primary"value="Submit Form" />
             </div>
 
         </form>
