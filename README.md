@@ -8,8 +8,8 @@ not verified.
 ## Future Scope:<br/>
 After submitting the new certificate, a pdf is generated and sent to the mail of the student and hash of that pdf is generated and stored in the blockchain.
 And while verifying the pdf is uploaded in the system and if the hash of that pdf is found it says verified else non verified.
-<br/>
-This prodect was made in the hackathon NextStep Hacks 2022.
+<br/><br/>
+This was created in the hackathon NextStep Hacks 2022.
 
 ## 🔥 Team Certifications
 - <a href="https://github.com/VinayakPatkar">Vinayak Patkar</a>
